@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regioes.Api", "Regioes.Api\Regioes.Api.csproj", "{19B2A389-8F90-4ECF-875E-A7FED7E7262A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regioes.Core", "Regioes.Core\Regioes.Core.csproj", "{0E7562B8-2F8C-4173-979A-835867D37B2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regioes.Infra", "Regioes.Infra\Regioes.Infra.csproj", "{E1071670-79C1-42AA-9F09-9A316BC2A025}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regioes.Shared", "Regioes.Shared\Regioes.Shared.csproj", "{E2690569-EBF3-4EEE-AA10-A5F9093289F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regioes.Test", "Regioes.Test\Regioes.Test.csproj", "{510D08FD-870C-468F-9093-A77D6D113771}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kubernetes", "kubernetes", "{132388F3-2B7C-41BE-8B79-F5486E0DDBFE}"
+	ProjectSection(SolutionItems) = preProject
+		deployment.yaml = deployment.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19B2A389-8F90-4ECF-875E-A7FED7E7262A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B2A389-8F90-4ECF-875E-A7FED7E7262A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B2A389-8F90-4ECF-875E-A7FED7E7262A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B2A389-8F90-4ECF-875E-A7FED7E7262A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7562B8-2F8C-4173-979A-835867D37B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7562B8-2F8C-4173-979A-835867D37B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7562B8-2F8C-4173-979A-835867D37B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7562B8-2F8C-4173-979A-835867D37B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1071670-79C1-42AA-9F09-9A316BC2A025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1071670-79C1-42AA-9F09-9A316BC2A025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1071670-79C1-42AA-9F09-9A316BC2A025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1071670-79C1-42AA-9F09-9A316BC2A025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2690569-EBF3-4EEE-AA10-A5F9093289F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2690569-EBF3-4EEE-AA10-A5F9093289F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2690569-EBF3-4EEE-AA10-A5F9093289F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2690569-EBF3-4EEE-AA10-A5F9093289F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{510D08FD-870C-468F-9093-A77D6D113771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510D08FD-870C-468F-9093-A77D6D113771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510D08FD-870C-468F-9093-A77D6D113771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510D08FD-870C-468F-9093-A77D6D113771}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FDA6B6F-85CB-46E7-BF67-B38EBC8CE69B}
+	EndGlobalSection
+EndGlobal
