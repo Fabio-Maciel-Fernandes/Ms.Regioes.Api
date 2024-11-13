@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msregiaoapipod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msregiaoapipod
+  template:
+    metadata:
+      labels:
+        app: msregiaoapipod
+    spec: 
+      containers:
+      - name: msregiaoapipod
+        image: fabaofloripa/regioes.api:latest
+        ports:
+          - containerPort: 8082
+  
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: msregiaoapipod-service  
+spec:
+  selector:
+    app: msregiaoapipod
+  ports:
+    - targetPort: 8082
+      port: 80      
+  type: ClusterIP 
