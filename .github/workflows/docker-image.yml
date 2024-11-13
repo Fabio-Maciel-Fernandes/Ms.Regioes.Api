@@ -1,25 +1,33 @@
-name: CI/CD Pipeline MsRegiao FIAP API
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msregiaoapipod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msregiaoapipod
+  template:
+    metadata:
+      labels:
+        app: msregiaoapipod
+    spec: 
+      containers:
+      - name: msregiaoapipod
+        image: fabaofloripa/regioes.api:latest
+        ports:
+          - containerPort: 8084
+  
+---
 
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-
-      - name: Login to Docker Hub
-        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-
-
-      - name: Build and Push Docker Image
-        run: |
-          docker build -t fabaofloripa/regioes.api:latest .
-          docker push fabaofloripa/regioes.api:latest
+apiVersion: v1
+kind: Service
+metadata:
+  name: msregiaoapipod-service  
+spec:
+  selector:
+    app: msregiaoapipod
+  ports:
+    - targetPort: 8082
+      port: 80      
+  type: ClusterIP 
