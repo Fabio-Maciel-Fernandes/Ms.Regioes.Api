@@ -29,10 +29,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgre
+  name: postgresregiao
 spec: 
   selector:
-    app: postgre
+    app: postgresregiao
   ports:
     - port: 5432
 ---
