@@ -71,5 +71,4 @@ spec:
     app: msregiaoapipod
   ports:
     - targetPort: 8082
-      port: 80      
-  type: ClusterIP 
+      port: 80
