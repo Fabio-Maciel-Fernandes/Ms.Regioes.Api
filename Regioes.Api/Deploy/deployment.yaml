@@ -70,5 +70,7 @@ spec:
   selector:
     app: msregiaoapipod
   ports:
-    - targetPort: 8082
+    - protocol: TCP
       port: 80
+      targetPort: 8082
+  type: LoadBalancer 
