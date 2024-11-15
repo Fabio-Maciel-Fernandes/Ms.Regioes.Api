@@ -58,7 +58,7 @@ spec:
         - name: ConnectionStringPostgres
           value: "Host=postgresregiao;Database=regioesdatabase;Username=postgres;Password=Floripa102030"
         ports:
-          - containerPort: 8082
+          - containerPort: 8080
   
 ---
 
@@ -72,5 +72,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8082
+      targetPort: 8080
   type: LoadBalancer 
