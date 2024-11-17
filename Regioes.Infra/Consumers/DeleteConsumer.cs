@@ -15,7 +15,7 @@ namespace Regioes.Infra.Consumers
 
         private readonly ILogger<DeleteConsumer> logger;
         private readonly IServices<Regiao> services;
-        private readonly int intervaloMensagemWorkerAtivo = 10000;
+        private readonly int intervaloMensagemWorkerAtivo = 60000;
         private readonly string url = "amqps://nzosfmoq:uZNH48guR3ZZzmTWib0KoeZUYFICSQI7@fly.rmq.cloudamqp.com/nzosfmoq";
         private readonly string queue = "REGIAO_DELETE";
         public DeleteConsumer(ILogger<DeleteConsumer> logger, IServices<Regiao> services)
