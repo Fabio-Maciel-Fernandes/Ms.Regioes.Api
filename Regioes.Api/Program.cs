@@ -35,9 +35,9 @@ public class Program
         builder.Services.AddMemoryCache();
         builder.Services.AddSingleton<ICacheService, CacheService>();
         builder.Services.AddApplicationInsightsTelemetry();
-        //builder.Services.AddHostedService<InclusaoConsumer>();
-        //builder.Services.AddHostedService<UpdateConsumer>();
-        //builder.Services.AddHostedService<DeleteConsumer>();
+        builder.Services.AddHostedService<InclusaoConsumer>();
+        builder.Services.AddHostedService<UpdateConsumer>();
+        builder.Services.AddHostedService<DeleteConsumer>();
 
         builder.Services.AddHealthChecks();
 
