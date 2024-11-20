@@ -17,20 +17,20 @@ spec:
         - name: postgresregiao
           image: postgres:13.1
           ports:
-        - containerPort: 5432
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
-        envFrom:
-        - configMapRef:
-            name: postgres-secret
-        volumeMounts:
-        - mountPath: /var/lib/postgresql/data
-          name: postgresdata
+          - containerPort: 5432
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          envFrom:
+          - configMapRef:
+              name: postgres-secret
+          volumeMounts:
+          - mountPath: /var/lib/postgresql/data
+            name: postgresdata
       volumes:
       - name: postgresdata
         persistentVolumeClaim:
