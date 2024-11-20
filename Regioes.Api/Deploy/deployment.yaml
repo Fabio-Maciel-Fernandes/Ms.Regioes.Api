@@ -16,15 +16,25 @@ spec:
       containers:
         - name: postgresregiao
           image: postgres:13.1
-          env:
-          - name: POSTGRES_PASSWORD
-            value: Floripa102030
-          - name: POSTGRES_USER
-            value: postgres
-          - name: POSTGRES_DB
-            value: regioesdatabase
           ports:
-            - containerPort: 5432
+        - containerPort: 5432
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        envFrom:
+        - configMapRef:
+            name: postgres-secret
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: postgresdata
+      volumes:
+      - name: postgresdata
+        persistentVolumeClaim:
+          claimName: postgres-volume-claim       
 ---
 apiVersion: v1
 kind: Service

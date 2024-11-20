@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-secret
+  labels:
+    app: postgresregiao
+data:
+  POSTGRES_DB: regioesdatabase
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: Floripa102030
