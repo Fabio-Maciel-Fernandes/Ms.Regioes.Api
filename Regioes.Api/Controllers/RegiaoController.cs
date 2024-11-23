@@ -23,13 +23,7 @@ namespace Regioes.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
-        {
-            return Ok(new List<Regiao>() { new Regiao() {
-                DDD = 48,
-                Estado = "Santa Catarina",
-                Nome = "Sul"                
-            } });
-
+        {            
             var resultado = await _regiaoService.GetAllAsync(cancellationToken);
 
             if (resultado.Any())
